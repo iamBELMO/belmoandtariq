@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    
+    <!-- لمنع التحديد النصي على الجوال (يحسن الأداء) -->
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        input, textarea, select {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
+            font-size: 16px !important; /* لمنع zoom على iOS */
+        }
+    </style>
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BELMO & TARIQ | اتحاد الذكاء الاصطناعي والتصميم الجرافيكي</title>
@@ -1401,4 +1427,5 @@ const createDigitalExperience = (ai, design) => {
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
