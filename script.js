@@ -1,6 +1,4 @@
 
-
-
 // JavaScript ضخم ومعقد للغاية للموقع
 
 document.addEventListener('DOMContentLoaded', function() {
