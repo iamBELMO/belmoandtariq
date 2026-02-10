@@ -57,32 +57,6 @@
     --section-spacing: 120px;
 }
 
-/* إصلاح مشاكل الأداء على الجوال */
-* {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: none;
-}
-
-html, body {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-}
-
-/* منع التمرير الأفقي */
-* {
-    max-width: 100%;
-}
-
 [data-theme="light"] {
     --primary-color: #f8f9fa;
     --secondary-color: #ffffff;
@@ -102,9 +76,16 @@ body {
     --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
 }
 
+/* تحسينات الأداء للجوال */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    overflow-x: hidden;
 }
 
 body {
@@ -112,8 +93,10 @@ body {
     background-color: var(--primary-color);
     color: var(--text-primary);
     line-height: 1.6;
-  position: relative; /* تغيير overflow إلى position */
+    position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition: background-color var(--transition-normal), color var(--transition-normal);
@@ -3087,6 +3070,36 @@ canvas {
     box-shadow: var(--shadow-lg);
 }
 
+/* تحسينات للأداء على الجوال */
+@media (max-width: 768px) {
+    .floating-shapes {
+        display: none; /* أخفِ العناصر العائمة على الجوال لتحسين الأداء */
+    }
+    
+    .logo-part,
+    .title-line::after,
+    .highlight-text::after,
+    .neuron,
+    .synergy-circle,
+    .timeline-line,
+    .level-progress {
+        animation: none !important; /* أوقف بعض الرسوم المتحركة على الجوال */
+    }
+    
+    .btn::before {
+        display: none; /* تعطيل تأثير البقع على الجوال */
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+    
+    .stat-item {
+        padding: 15px !important;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero-container,
@@ -3296,5 +3309,15 @@ canvas {
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
 
+/* إصلاح التنقل السلس مع الهيدر الثابت */
+section {
+    scroll-margin-top: var(--header-height);
+}
+
+@media (max-width: 768px) {
+    section {
+        scroll-margin-top: 80px;
+    }
 }
