@@ -3221,6 +3221,70 @@ canvas {
         margin-top: 10px;
     }
 }
+@media (max-width: 768px) {
+    /* ... الكود الحالي ... */
+    
+    /* أضف هذه التحسينات */
+    .hero-description {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+    
+    .visual-container {
+        gap: 20px;
+    }
+    
+    .code-terminal,
+    .design-canvas {
+        border-radius: 10px;
+    }
+    
+    .terminal-body,
+    .canvas-body {
+        padding: 15px;
+    }
+    
+    .synergy-circle {
+        width: 250px !important;
+        height: 250px !important;
+    }
+    
+    .circle-part {
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 0.8rem;
+    }
+    
+    .part-icon {
+        font-size: 1.8rem !important;
+    }
+    
+    .center-icon {
+        font-size: 1.2rem !important;
+    }
+    
+    .ai-chat-container {
+        margin: 0 10px 40px;
+    }
+    
+    .ai-chat-messages {
+        height: 300px;
+    }
+    
+    .message-content {
+        max-width: 90% !important;
+        font-size: 0.9rem;
+    }
+    
+    .contact-form-container {
+        padding: 25px !important;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+    }
+}
 
 @media (max-width: 576px) {
     :root {
@@ -3268,5 +3332,114 @@ canvas {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* للهواتف الصغيرة جداً */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px !important;
+    }
+    
+    .hero-container,
+    .expertise-details,
+    .contact-container,
+    .challenges-container {
+        padding: 0 10px !important;
+    }
+    
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .hero-title .title-line {
+        display: inline;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+    
+    .stat-item {
+        padding: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    /* تحسين عرض القوائم */
+    .nav-list,
+    .mobile-nav-list {
+        gap: 10px;
+    }
+    
+    .nav-link {
+        padding: 5px;
+    }
+    
+    .nav-text {
+        font-size: 0.8rem;
+    }
+    
+    /* تحسين الأقسام */
+    section {
+        padding: 60px 0 !important;
+    }
+    
+    .tab-content,
+    .tab-content-pane {
+        padding: 20px !important;
+    }
+    
+    .member-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .member-avatar {
+        margin-left: 0;
+    }
+    
+    .expertise-features li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .project-card,
+    .benefit-item,
+    .showcase-item {
+        padding: 15px !important;
+    }
+    
+    /* إصلاح مشاكل التمرير الأفقي */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container,
+    .header-container,
+    .hero-container {
+        max-width: 100vw;
+    }
+}
     
 }
