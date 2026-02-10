@@ -57,6 +57,32 @@
     --section-spacing: 120px;
 }
 
+/* إصلاح مشاكل الأداء على الجوال */
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+}
+
+html, body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+}
+
+/* منع التمرير الأفقي */
+* {
+    max-width: 100%;
+}
+
 [data-theme="light"] {
     --primary-color: #f8f9fa;
     --secondary-color: #ffffff;
@@ -86,7 +112,10 @@ body {
     background-color: var(--primary-color);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflposition: relative;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
