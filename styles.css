@@ -112,7 +112,7 @@ body {
     background-color: var(--primary-color);
     color: var(--text-primary);
     line-height: 1.6;
-    overflposition: relative;
+  position: relative; /* تغيير overflow إلى position */
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
